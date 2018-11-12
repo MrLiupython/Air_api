@@ -51,9 +51,6 @@ def create_app():
     
     from .air_batch_api import air_batch_api_v1, air_batch_api_v1_bp
     app.register_blueprint(air_batch_api_v1_bp, url_prefix='/api')
-    
-    from .yhxd_api import yhxd_v1, yhxd_v1_bp
-    app.register_blueprint(yhxd_v1_bp, url_prefix='/api/yhxd')
 
     from webapp.webadmin.views import UserView, RoleView, MyModelView, AirPortView, AirlinesView, WhitelistView, \
         FlightsView, NotAuthenticatedMenuLink, AuthenticatedMenuLink, AirlineFlightsView, CarriersView, \
@@ -84,7 +81,7 @@ def create_app():
     #     try:
     #         db.create_all()
     #         r = user_datastore.create_role(id=1, name='superuser', description='超级管理员')
-    #         u = user_datastore.create_user(id=1, email='admin', password='yhxd@1234')
+    #         u = user_datastore.create_user(id=1, email='', password='')
     #         user_datastore.create_role(id=2, name='manager', description='普通后台用户')
     #         user_datastore.create_role(id=3, name='user', description='普通前台用户')
     #         user_datastore.add_role_to_user(u, r)
